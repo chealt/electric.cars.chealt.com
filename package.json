@@ -1,0 +1,11 @@
+{
+  "name": "electric.cars.chealt.com",
+  "version": "1.0.0",
+  "main": "src/index.js",
+  "repository": "https://github.com/chealt/electric.cars.chealt.com.git",
+  "author": "Attila Bartha <atikenny@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "build": "echo 'build'"
+  }
+}
