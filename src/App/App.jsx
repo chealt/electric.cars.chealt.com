@@ -1,5 +1,7 @@
 import React from 'react';
 
-const App = () => <h1>Compare Electric Cars</h1>;
+import Title from './Title/Title.jsx';
+
+const App = () => <Title />;
 
 export default App;
