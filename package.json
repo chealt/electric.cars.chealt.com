@@ -20,13 +20,17 @@
     "@babel/preset-env": "^7.15.0",
     "@babel/preset-react": "^7.14.5",
     "@chealt/check": "^0.6.0",
+    "@parcel/transformer-image": "2.0.0-rc.0",
     "eslint": "^7.32.0",
     "eslint-config-prettier": "^8.3.0",
+    "eslint-import-resolver-parcel": "^1.10.6",
     "eslint-plugin-import": "^2.24.0",
     "eslint-plugin-prettier": "^3.4.0",
     "eslint-plugin-react": "^7.24.0",
     "eslint-plugin-react-hooks": "^4.2.0",
     "parcel": "^2.0.0-rc.0",
-    "prettier": "^2.3.2"
+    "prettier": "^2.3.2",
+    "prop-types": "^15.7.2",
+    "sharp": "^0.28.3"
   }
 }

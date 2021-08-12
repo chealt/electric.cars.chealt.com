@@ -2,9 +2,12 @@ const { eslintConfig } = require('@chealt/check');
 
 module.exports = {
   ...eslintConfig,
+  settings: {
+    'import/resolver': 'parcel'
+  },
   overrides: [
     {
-      files: ['**/*.jsx'],
+      files: ['**/*.{js,jsx}'],
       extends: ['plugin:react/recommended'],
       plugins: ['react', 'react-hooks'],
       settings: {
