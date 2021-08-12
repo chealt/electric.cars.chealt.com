@@ -6,7 +6,7 @@ import Models from './Models/Models.jsx';
 const Car = ({ brand, models }) => (
   <>
     <span>{brand}</span>
-    <Models models={models} />
+    <Models brand={brand} models={models} />
   </>
 );
 
