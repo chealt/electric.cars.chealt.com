@@ -6,6 +6,7 @@
   "license": "MIT",
   "scripts": {
     "build": "parcel build ./src/index.html",
+    "dev": "parcel serve ./src/index.html",
     "lint": "yarn lint:js",
     "lint:js": "eslint --ext .js,.jsx ."
   },
