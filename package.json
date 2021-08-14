@@ -4,28 +4,10 @@
   "repository": "https://github.com/chealt/electric.cars.chealt.com.git",
   "author": "Attila Bartha <atikenny@gmail.com>",
   "license": "MIT",
+  "main": "./src/index.html",
   "scripts": {
-    "build": "parcel build ./src/index.html",
-    "lint": "yarn lint:js",
-    "lint:js": "eslint --ext .js,.jsx ."
+    "start": "chealt"
   },
-  "dependencies": {
-    "react": "^17.0.2",
-    "react-dom": "^17.0.2"
-  },
-  "devDependencies": {
-    "@babel/core": "^7.15.0",
-    "@babel/eslint-parser": "^7.15.0",
-    "@babel/preset-env": "^7.15.0",
-    "@babel/preset-react": "^7.14.5",
-    "@chealt/check": "^0.6.0",
-    "eslint": "^7.32.0",
-    "eslint-config-prettier": "^8.3.0",
-    "eslint-plugin-import": "^2.24.0",
-    "eslint-plugin-prettier": "^3.4.0",
-    "eslint-plugin-react": "^7.24.0",
-    "eslint-plugin-react-hooks": "^4.2.0",
-    "parcel": "^2.0.0-rc.0",
-    "prettier": "^2.3.2"
-  }
+  "dependencies": {},
+  "devDependencies": {}
 }
