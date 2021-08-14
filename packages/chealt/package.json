@@ -1,0 +1,9 @@
+{
+  "name": "@chealt/chealt",
+  "type": "module",
+  "version": "0.0.1",
+  "main": "./bin/index.js",
+  "bin": {
+    "chealt": "./bin/index.js"
+  }
+}
