@@ -1,13 +1,15 @@
 {
   "name": "electric.cars.chealt.com",
-  "version": "1.0.0",
+  "version": "0.0.0",
+  "private": true,
   "repository": "https://github.com/chealt/electric.cars.chealt.com.git",
   "author": "Attila Bartha <atikenny@gmail.com>",
   "license": "MIT",
-  "main": "./src/index.html",
+  "main": "./packages/app/src/index.html",
   "scripts": {
     "start": "chealt"
   },
-  "dependencies": {},
-  "devDependencies": {}
+  "workspaces": [
+    "packages/*"
+  ]
 }
