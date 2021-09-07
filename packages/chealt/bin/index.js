@@ -1,23 +1,23 @@
 #!/usr/bin/env node
-import { join } from 'path';
-import { readFile } from 'fs/promises';
-import { unified } from 'unified';
-import rehypeParse from 'rehype-parse';
-import rehypeStringify from 'rehype-stringify';
+import { join } from "path";
+import { readFile } from "fs/promises";
+import { unified } from "unified";
+import rehypeParse from "rehype-parse";
+import rehypeStringify from "rehype-stringify";
 
 const cwd = process.cwd();
 
 const readPackageJSON = async () => {
-  return JSON.parse(await readFile(join(cwd, 'package.json')));
+  return JSON.parse(await readFile(join(cwd, "package.json")));
 };
 
 const readMain = async (packageJSON) => {
-  let main = join(cwd, './src/index.html');
-  
+  let main = join(cwd, "./src/index.html");
+
   if (packageJSON.main) {
     main = join(cwd, packageJSON.main);
 
-    if (!main.endsWith('.html')) {
+    if (!main.endsWith(".html")) {
       throw new Error(`Main script needs to be html, got: ${main}`);
     }
   }
@@ -27,7 +27,7 @@ const readMain = async (packageJSON) => {
 
 const importMaps = {};
 const collectImportMaps = (node) => {
-  if (node.tagName === 'script' && node.properties.type === 'importmap') {
+  if (node.tagName === "script" && node.properties.type === "importmap") {
     const imports = JSON.parse(node.children[0].value).imports;
     Object.entries(imports).forEach(([key, value]) => {
       importMaps[key] = value;
@@ -37,7 +37,7 @@ const collectImportMaps = (node) => {
   }
 
   return node;
-}
+};
 
 const getAST = (html) => {
   return unified()
@@ -45,7 +45,7 @@ const getAST = (html) => {
     .use(() => collectImportMaps)
     .use(rehypeStringify)
     .process(html);
-}
+};
 
 const packageJSON = await readPackageJSON();
 const main = await readMain(packageJSON);
